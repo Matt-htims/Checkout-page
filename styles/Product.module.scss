@@ -1,0 +1,88 @@
+@import 'variables';
+@import 'mixins';
+
+.product {
+	display: flex;
+	margin-bottom: 25px;
+	font: 600 14px 'Montserrat', sans-serif;
+	width: 100%;
+
+	.image {
+		position: relative;
+		height: 135px;
+		width: 135px;
+		border-radius: 12px;
+		overflow: hidden;
+		margin-right: 30px;
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		h3 {
+			color: #4e5150;
+			margin-bottom: 6px;
+
+			@include mobile() {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.price {
+		display: flex;
+		align-items: center;
+
+		h4 {
+			margin-right: 20px;
+			color: $orange;
+
+			@include mobile() {
+				font-size: 14px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			color: #4e5150;
+			text-decoration: line-through;
+
+			@include mobile() {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.amount {
+		display: flex;
+		justify-content: space-around;
+		border: 1px solid black;
+		border-radius: 12px;
+		padding: 15px 0;
+		width: 135px;
+
+		@include mobile() {
+			font-size: 16px;
+		}
+
+		button {
+			width: 20px;
+			height: 20px;
+			border: none;
+			cursor: pointer;
+			color: $gray3;
+			background-color: $gray5;
+			border-radius: 4px;
+
+			@include mobile() {
+				font-size: 16px;
+			}
+
+			&:hover {
+				background-color: $gray3;
+				color: $gray1;
+			}
+		}
+	}
+}

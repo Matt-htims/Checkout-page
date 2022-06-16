@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+	padding: 3rem 12px 0 12px;
+
+	max-width: 1000px;
+	margin: auto;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include mobile() {
+	}
+}
+
+.header {
+	h1 {
+		font: 600 36px 'Montserrat', sans-serif;
+		color: $title;
+
+		@include mobile() {
+			font-size: 24px;
+		}
+	}
+}
+
+.main {
+	margin-top: 60px;
+	display: flex;
+
+	.form {
+		flex: 3;
+	}
+
+	.info {
+		flex: 2;
+		width: 100%;
+	}
+
+	@include mobile() {
+		flex-direction: column-reverse;
+		margin-top: 20px;
+	}
+}
+
+.footer {
+	margin-bottom: 24px;
+	margin-top: 50px;
+	p {
+		text-align: center;
+		font: 600 14px 'Montserrat', sans-serif;
+		color: #bdbdbd;
+
+		a {
+			font-weight: 700;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}

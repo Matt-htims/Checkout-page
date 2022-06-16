@@ -1,0 +1,118 @@
+@import 'mixins';
+@import 'variables';
+
+.form {
+	max-width: 465px;
+	h2 {
+		font: 600 18px 'Montserrat', sans-serif;
+		color: $gray1;
+		margin-bottom: 15px;
+
+		@include mobile() {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	}
+
+	@include mobile() {
+		max-width: 1000px;
+		margin-top: 40px;
+	}
+}
+
+.contact {
+}
+
+.shipping {
+	margin-top: 50px;
+
+	.twoline {
+		display: flex;
+		justify-content: space-between;
+
+		div {
+			width: 100%;
+		}
+
+		.one {
+			width: 100%;
+			margin-right: 15px;
+			label {
+				color: $gray2;
+				font: 12px 600 'Montserrat', sans-serif;
+
+				@include mobile() {
+					font-size: 10px;
+				}
+			}
+
+			div {
+				display: flex;
+				position: relative;
+				margin-top: 7px;
+				margin-bottom: 20px;
+
+				.icon {
+					position: absolute;
+					top: 9.5px;
+					left: 10px;
+					width: 20px;
+				}
+				select {
+					border: 1px solid $gray3;
+					border-radius: 12px;
+					width: 100%;
+					height: 55px;
+					padding-left: 40px;
+					font: 600 16px 'Montserrat', sans-serif;
+					color: $gray1;
+
+					@include mobile() {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.two {
+			margin-left: 15px;
+		}
+	}
+}
+
+.infosave {
+	display: flex;
+	align-items: center;
+
+	label {
+		font: 600 12px 'Montserrat', sans-serif;
+		color: $gray2;
+		margin-left: 11px;
+
+		@include mobile() {
+			font-size: 10px;
+		}
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+
+	button {
+		padding: 17px 45px;
+		border: 1px solid $orange;
+		background-color: $orange;
+		border-radius: 12px;
+		font: 600 16px 'Montserrat', sans-serif;
+		color: white;
+		cursor: pointer;
+
+		&:hover {
+			color: $orange;
+			background-color: white;
+			border: 1px solid black;
+		}
+	}
+}

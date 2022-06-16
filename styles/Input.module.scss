@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'mixins';
+
+.input {
+	width: 100%;
+	font: 600 16px 'Montserrat', sans-serif;
+
+	@include mobile() {
+		font-size: 16px;
+	}
+
+	label {
+		color: $gray2;
+		font: 12px 600 'Montserrat', sans-serif;
+
+		@include mobile() {
+			font-size: 10px;
+		}
+	}
+
+	div {
+		display: flex;
+		position: relative;
+		margin-top: 7px;
+		margin-bottom: 20px;
+
+		@include mobile() {
+			margin-top: 5px;
+			margin-bottom: 15px;
+		}
+
+		.icon {
+			position: absolute;
+			top: 9.5px;
+			left: 10px;
+			width: 20px;
+		}
+		input {
+			border: 1px solid $gray3;
+			border-radius: 12px;
+			width: 100%;
+			height: 55px;
+			padding-left: 40px;
+			font: 600 16px 'Montserrat', sans-serif;
+			color: $gray1;
+
+			@include mobile() {
+				font-size: 12px;
+			}
+
+			@include placeholder {
+				font: 600 16px 'Montserrat', sans-serif;
+				color: $gray3;
+
+				@include mobile() {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
